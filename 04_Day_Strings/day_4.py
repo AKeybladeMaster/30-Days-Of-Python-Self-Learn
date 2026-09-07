@@ -268,4 +268,79 @@ print('Does it contain Coding? {}, Word replaced: {}'.format(company.find('Codin
 string1 = "Python For Everyone"
 string2 = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
 print('String replaced: {}, Base string split: {}, 2nd String split: {}'.format(string1.replace('Everyone', 'All'), string1.split(), string2.split()))
-print('Cphar at index 0 of company string: {}, Last index of string: {}'.format(company[0], len(company)))
+print('Char at index 0 of company string: {}, Last index of string: {}'.format(company[0], len(company)))
+
+# What character is at index 10 in "Coding For All" string
+print('Character at index 10 in company string: {}'.format(company[10]))
+
+# Create an acronym or an abbreviation for the name 'Python For Everyone'
+acronym = ''.join([word[0] for word in string1.split()])
+
+# Create an acronym or an abbreviation for the name 'Coding For All'
+acronym2 = ''.join([word[0] for word in company.split()])
+
+# Use index to determine the position of the first occurrence of C and F in Coding For All
+print('Position of the first occurrence of C in company string: {}'.format(company.index('C')))
+print('Position of the first occurrence of F in company string: {}'.format(company.index('F')))
+
+# Use rfind to determine the position of the last occurrence of l in Coding For All People
+string3 = "Coding For All People"
+print('Position of the last occurrence of L in string3: {}'.format(string3.rfind('l')))
+
+# Use index or find to find the position of the first occurrence of the word 'because' and rindex to find
+# the last occurrence in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+phrase = "You cannot end a sentence with because because because is a conjunction"
+print('Position of the first occurrence (using index) of "because" in phrase string: {}'.format(phrase.index('because')))
+print('Position of the last occurrence (using rindex) of "because" in phrase string: {}'.format(phrase.rindex('because')))
+
+# Slice out the phrase 'because because because' in the following sentence: 'You cannot end a sentence with because because because is a conjunction'
+print('Slice applied in the phrase string: {}'.format(phrase[35:58]))
+
+# Does 'Coding For All' start with a substring Coding?
+print('Does "Coding For All" start with "Coding" -> {}'.format(company.startswith("Coding")))
+
+# Does 'Coding For All' end with a substring coding?
+print('Does "Coding For All" end with "coding" -> {}'.format(company.endswith("coding")))
+
+# '   Coding For All      '  , remove the left and right trailing spaces in the given string
+print('"     Coding For All     " with removed trailing spaces: {}'.format(company.lstrip()))
+
+# Which one of the following variables returns True when we use the method isidentifier(): 
+# 1) 30DaysOfPython 
+# 2) thirty_days_of_python
+print('isidentifier() results on 30DaysOfPython -> {} , thirty_days_of_python -> {}'.format('30DaysOfPython'.isidentifier(), 'thirty_days_of_python'.isidentifier()))
+
+# The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string
+librariesList = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+print('Libraries list joined by hash with space: {}'.format('# '.join(librariesList)))
+
+# Use the new line escape sequence to separate the following sentences:
+# I am enjoying this challenge
+# I just wonder what is next
+print("I am enjoying this challenge.\nI just wonder what is next.")
+
+# Use a tab escape sequence to write the following lines.
+# Name      Age     Country   City
+# Asabeneh  250     Finland   Helsinki
+print("Name\tAge\tCountry\tCity")
+print("Asabeneh\t250\tFinland\tHelsinki")
+
+# Use the string formatting method to display the following: 
+# radius = 10 
+# area = 3.14 * radius ** 2 
+# The area of a circle with radius 10 is 314 meters square.
+radius = 10
+area = 3.14 * radius ** 2
+print("The area of a circle with radius {} is {} meters square.".format(radius, area))
+
+# Make the following using string formatting methods
+a = 8
+b = 6
+
+print("{} + {} = {}".format(a, b, a + b))
+print("{} - {} = {}".format(a, b, a - b))
+print("{} * {} = {}".format(a, b, a * b))
+print("{} / {} = {:.2f}".format(a, b, a / b))
+print("{} % {} = {}".format(a, b, a % b))
+print("{} // {} = {}".format(a, b, a // b))
+print("{} ** {} = {}".format(a, b, a ** b))
